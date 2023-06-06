@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="monthlyBudget"> 
+        <form id="monthlyBudgetForm" onSubmit="return false">
+            <p id="welcomeUser">"WELCOME TO OUR BUDGET APP"</p>
+            <div id="budgetInputField">
+                <label for="monthlyBudgetField">Monthly Budget:</label>
+                <input type="number" id="monthlyBudgetField" name="monthlyBudget"  placeholder="Enter your monthly budget" size="150px" required>
+                <button id="budgetButton" type = "submit" ondblclick="return false;" onclick="savebudget();">Save</button>   
+            </div>
+        </form> 
+    </div>
+    <div id="container">
+        <p id="totalSum">TOTAL EXPENSE:</p>
+        <p id="getBudget">YOUR EXPENSE:</p>
+        <p id="remaining">REMAINING AMOUNT:</p>
+        <button id="remainingButton" onclick="remainingAmount()">to get remaining</button>
+        <form id="expenseForm" onSubmit="return false">
+            <h2>Expenses</h2>
+            <div class="expense-item">
+                <input type="checkbox" id="expense1" name="Tranpotation " onclick="toggleInput(1)">
+                <label for="expense1">Transpotation</label>
+                <input type="number" id="priceOf1" placeholder="Enter Price Here" disabled>
+                <input type="number" id="quantityOf1" placeholder="Enter Quantity Here" disabled>
+            </div>
+            <div class="expense-item">
+                <input type="checkbox" id="expense2" name="Groceries " onclick="toggleInput(2)">
+                <label for="expense2">Groceries</label>
+                <input type="number" id="priceOf2" placeholder="Enter Price Here" disabled>
+                <input type="number" id="quantityOf2" placeholder="Enter Quantity Here" disabled>
+            </div>
+            <div class="expense-item">
+                <input type="checkbox" id="expense3" name="Medicals " onclick="toggleInput(3)">
+                <label for="expense3">Medicals</label>
+                <input type="number" id="priceOf3" placeholder="Enter Price Here" disabled>
+                <input type="number" id="quantityOf3" placeholder="Enter Quantity Here" disabled>
+            </div>
+            <div class= "expense-item">
+                <input type="checkbox" id="expense4" onclick="toggleInput(4)">
+                <label for="expense4">Restaurants</label>
+                <input type="number" id="priceOf4" placeholder="Enter Price Here" disabled>
+                <input type="number" id="quantityOf4" placeholder="Enter Quantity Here" disabled>
+            </div>
+            <div class= "expense-item">
+                <input type="checkbox" id="expense5" onclick="toggleInput(5)">
+                <label for="expense5">School Fees</label>
+                <input type="number" id="priceOf5" placeholder= "Enter Price Here" disabled>
+                <input type="number" id="quantityOf5" placeholder= "Enter Quantity Here" disabled>
+            </div>
+            <button type = "submit" ondblclick="return false" onclick="kharcha1();">Save</button>
+        </form>
+        <div id="emptyPara">
+            <p id="para1"></p>
+            <p id="para2"></p>
+            <p id="para3"></p>
+            <p id="para4"></p>
+            <p id="para5"></p>
+        </div>
+    </div>
+<script src="./app.js"></script>
+</body>
+
+</html>
